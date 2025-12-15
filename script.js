@@ -341,9 +341,9 @@ function hideSpinModal() {
 }
 
 function goElectrical() {
-  window.location.href = "https://9kgsk3.csb.app/";
+  window.location.href = "https://z66vpv-5000.csb.app/";
 }
 
 function goCafeteria() {
-  window.location.href = "https://xql8vv.csb.app/";
+  window.location.href = "https://malachi515.github.io/Cafeteria-Start/";
 }
