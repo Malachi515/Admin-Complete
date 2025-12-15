@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Room</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="darkness"></div>
+
+
+    <div class="lil-row center-content"></div>
+    <div class="row right-content">
+      <div class="mapbox">
+        <div class="map-box-row-1 center-content">
+          <div class="map-box-box center-content"></div>
+          <div
+            class="map-box-box center-content imageinator"
+            onclick="showMap()"
+            onmouseover="playHoverSound()"
+          ></div>
+        </div>
+
+        <div class="map-box-row center-content">
+          <div class="map-box-box center-content"></div>
+          <div class="map-box-box center-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imposter Awaken Modal-->
+    <div class="impmodal" id="myOtherModal">
+      <img class="plus-sized" src="images/gifs/Video Game GIF.gif" />
+    </div>
+    <!-- Imposter Awaken Modal-->
+
+    <!-- Darkness  Modal-->
+    <div class="darkmodal" id="myDarkModal"></div>
+    <!-- Darkness  Modal-->
+
+    <!-- Modal Spin Start-->
+    <div class="spin-modal center-content" id="mySpinModal">
+      <div
+        class="close"
+        style="top: 10%; left: 23%"
+        onclick="hideSpinModal()"
+      >   <img src="images/button.png" /></div>
+        <div class="spin-modal-body center-content">
+          <!-- Top Wheel -->
+          <div class="spin-modal-body-row light-grey">
+            <div class="spin-modal-body-box-1 spin-right-content black">
+              <img
+                class="rotateCommand noclick"
+                src="images/Spinner-trans.png"
+                id="rotateMachine1"
+              />
+            </div>
+            <div class="spin-modal-body-box spin-left-content">
+              <div class="right-wrong blood" id="rightwrong1"></div>
+            </div>
+            <div class="spin-modal-body-box center-content">
+              <div
+                class="select-right-wrong center-content black"
+                onclick="stopWheel(0)"
+              ><img src="images/Click-Button.png" /></div>
+            </div>
+          </div>
+
+          <!-- Middle Wheel -->
+          <div class="spin-modal-body-row light-grey">
+            <div class="spin-modal-body-box-1 spin-right-content black">
+              <img
+                class="rotateCommand"
+                src="images/Spinner-trans.png"
+                id="rotateMachine2"
+              />
+            </div>
+            <div class="spin-modal-body-box spin-left-content">
+              <div class="right-wrong blood" id="rightwrong2"></div>
+            </div>
+            <div class="spin-modal-body-box center-content">
+              <div
+                class="select-right-wrong center-content black"
+                onclick="stopWheel(1)"
+              >  <img src="images/Click-Button.png" />
+            </div>
+            </div>
+          </div>
+
+          <!-- Bottom Wheel -->
+          <div class="spin-modal-body-row light-grey">
+            <div class="spin-modal-body-box-1 spin-right-content black">
+              <img
+                class="rotateCommand"
+                src="images/Spinner-trans.png"
+                id="rotateMachine3"
+              />
+            </div>
+            <div class="spin-modal-body-box spin-left-content">
+              <div class="right-wrong blood" id="rightwrong3"></div>
+            </div>
+            <div class="spin-modal-body-box center-content">
+              <div
+                class="select-right-wrong center-content black"
+                onclick="stopWheel(2)"
+              ><img src="images/Click-Button.png" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Spin End -->
+
+      <!-- Task Complete Modal-->
+      <div class="modal2" id="CardFoundText">
+        <h2>Card Found!</h2>
+      </div>
+
+      <div class="modal2" id="CardInsertText">
+        <h2>Swipe Card!</h2>
+      </div>
+
+      <div class="modal2" id="CardSearchText">
+        <h2>Find Card!</h2>
+      </div>
+
+      <div class="modal2" id="ImposterText">
+        <h2>Imposter Awakened - Timers Activated</h2>
+      </div>
+
+      <div class="modal2" id="MapText">
+        <h2>Go to Electrical Next</h2>
+      </div>
+      <!-- Task Complete Modal   -->
+
+      <div class="row center-content">
+        <div class="box-block center-content-2">
+          <div class="box-full right-content">
+            <img
+              class="upload-box-img"
+              src="images/admin-room(1).jpg"
+              id="uploadbox"
+              onclick="rotateModal()"
+            />
+          </div>
+          <div class="box-full center-content"></div>
+        </div>
+
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+      </div>
+
+      <div class="row center-content">
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+
+        <div class="swipe-box center-content">
+          <img src="" />
+        </div>
+
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+        <div class="box center-content"></div>
+      </div>
+
+      <div class="row-click center-content">
+        <div class="swipe-box center-content"></div>
+        <div class="swipe-box center-content"></div>
+
+        <div class="box-1 center-content">
+          <img
+            src="images/admin-click-box.png"
+            class="admin-box-img"
+            onclick="showModal()"
+            id="SwipeCardz"
+          />
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="all-map-modal center-content" id="myMap">
+        <div class="modal-body-map" id="mapPicture">
+          <!-- LAYOUT HERE -->
+       <div class="cafeteria" style="top: 10%; left: 42%" onclick="goCafeteria()"></div>
+         <!--  <div class="reactor" style="top: 40%; left: 10%"></div> --->
+         <!--  <div class="oxygen" style="top: 40%; left: 40%"></div> -->
+       <!--    <div class="admin" style="top: 40%; left: 40%"></div> -->
+          <div
+            class=""
+            style="top: 56%; left: 35%"
+            onclick="goElectrical()" id="electric"
+          ></div>
+        <!--   <div class="weapons" style="top: 40%; left: 40%"></div> -->
+         <!--  <div class="hotspot" style="top: 40%; left: 40%"></div> -->
+        </div>
+      </div>
+      <!-- Map -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal">
+
+
+
+      <div class="close" style="top: 10%; left: 23%" onclick="hideModal()">
+        <img src="images/button.png" />
+      </div>
+
+
+
+
+      <div class="modal-body">
+        <!-- Top Row -->
+
+        <div class="modal-row-top center-content">
+          <img src="" class="box-img" />
+        </div>
+
+        <!-- Swipe Card Area -->
+        <div class="swipe-area center-content">
+          <img src="" />
+          <div class="" id="card-id"></div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="modal-row-bottom center-content">
+          <img src="" />
+        </div>
+      </div>
+    </div>
+
+    <audio src="sound/among-us-ambient.mp3" id="Ambient"></audio>
+    <audio src="sound/Among-Open.mp3" id="Open"></audio>
+    <audio src="sound/among-close.mp3" id="Close"></audio>
+    <audio src="sound/among-error.mp3" id="Eroar"></audio>
+    <audio src="sound/select_clip.mp3" id="Select"></audio>
+    <audio src="sound/Among-us-alarm.mp3" id="Alarm"></audio>
+    <audio src="sound/imposter-reveal.mp3" id="Reveal"></audio>
+    <audio src="sound/lights-off.mp3" id="Lights-off"></audio>
+    <audio src="sound/among-correct.mp3" id="Correct"></audio>
+    <audio src="sound/disruptor-click.mp3" id="Click"></audio>
+    <audio src="sound/among-typing.mp3" id="Typing"></audio>
+    <audio src="" id=""></audio>
+    <audio src="" id=""></audio>
+    <audio src="" id=""></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

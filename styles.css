@@ -1,0 +1,730 @@
+h1 {
+  text-decoration: underline;
+}
+
+/* the 100vh and 100vw set the size of the body to fill the viewport (screen) */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  background-image: url("images/admin-room.png");
+  background-size: cover; /* makes it fill without stretching */
+  background-position: center; /* keeps the focus centered */
+  background-repeat: no-repeat;
+  overflow: 0;
+}
+
+/* build your layout */
+
+.lil-row {
+  height: 2%;
+  width: 100%;
+  display: flex;
+}
+
+.row {
+  height: 17%;
+  width: 100%;
+  display: flex;
+}
+
+.row-click {
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+
+.modal-body-close {
+  width: 45%;
+  height: 70%;
+
+  opacity: 1;
+  margin: 0;
+}
+
+.modal-body {
+  display: block;
+  width: 45%;
+  height: 70%;
+
+  opacity: 1;
+  margin: 0;
+}
+
+.modal-row {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+}
+
+.box-img {
+  max-height: 200%;
+  max-width: 250%;
+  object-fit: cover;
+}
+
+.modal-row-top {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+  background-image: url("images/swipe_top.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.swipe-area {
+  width: 100%;
+  height: calc(100% / 3);
+  position: relative;
+  overflow: hidden;
+  background-image: url("images/swipe_middle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.card {
+  width: 25%;
+  height: 80%;
+  border-radius: 8px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: grab;
+  transition: transform 0.1s;
+
+  background-image: url("images/Among-card.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.modal-row-bottom {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+  margin: 0;
+
+  background-image: url("images/swipe-bottom.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imageinator {
+  background-image: url("images/Map-Button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20;
+  opacity: 0;
+}
+
+.modal-row-box {
+  height: 100%;
+  width: calc(100% / 3);
+}
+
+.box-flex {
+  display: flex;
+  height: 100%;
+  width: 9%;
+}
+
+.box-block {
+  display: block;
+  height: 100%;
+  width: 9%;
+}
+
+.box-full {
+  height: 50%;
+  width: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 9%;
+}
+
+.box-1 {
+  height: 100%;
+  width: 9.5%;
+}
+
+.map-box-row-1 {
+  height: 70%;
+  width: 100%;
+}
+
+/* admin box image */
+.admin-box-img {
+  max-height: 80%;
+  max-width: 80%;
+  cursor: pointer;
+}
+
+.admin-box-img:hover {
+  max-height: 85%;
+  max-width: 85%;
+}
+/* admin box image */
+
+/* upload box image */
+.upload-box-img {
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.upload-box-img:hover {
+  max-height: 105%;
+  max-width: 105%;
+}
+/* upload box image */
+
+.map-box-row {
+  height: 30%;
+  width: 100%;
+  display: block;
+}
+.map-box-box {
+  height: 100%;
+  width: 50%;
+}
+
+.swipe-box {
+  height: 100%;
+  width: 9.5%;
+}
+
+.mapbox {
+  height: 100%;
+  width: 16%;
+  display: block;
+}
+
+.modal {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* control your content */
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.contain-image {
+  max-height: 95%;
+  max-width: 95%;
+}
+
+.center-content-2 {
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.right-content-top {
+  justify-content: right;
+  align-items: right;
+  display: flex;
+}
+
+.right-content {
+  justify-content: right;
+  align-items: center;
+  display: flex;
+}
+img:hover {
+  cursor: pointer;
+}
+
+img:active {
+  transform: scale(0.95);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  opacity: 0.95;
+}
+
+.impmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 18;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* semi-transparent whitesmoke */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.darkmodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* semi-transparent whitesmoke */
+  opacity: 0.9;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.plus-sized {
+  transform: scale(5);
+}
+
+.sizer {
+  width: 70%;
+  height: 100%;
+}
+
+.sizer-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.all-map-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+
+.flex {
+  display: flex;
+}
+
+.modal-body-map {
+  display: none;
+  width: 90%;
+  height: 90%;
+  opacity: 1;
+  margin: 0;
+
+  background-image: url("images/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.all-map {
+  position: absolute;
+  pointer-events: auto;
+  width: 140px;
+  height: 140px;
+  z-index: 20;
+}
+
+.all-map:hover {
+  width: 145px;
+  z-index: 20;
+}
+
+.close {
+  position: absolute;
+  pointer-events: auto;
+  width: 100px;
+  height: 300px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* colors to see divs */
+.purple {
+  background-color: #523d64;
+}
+
+.green {
+  background-color: #85e21f;
+}
+
+.orange {
+  background-color: #da6339;
+}
+
+.gold {
+  background-color: #d3a047;
+}
+
+.yellow {
+  background-color: #ffeca7;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.slate {
+  background-color: #1e171f;
+}
+
+.dark-grey {
+  background-color: #3a3b3c;
+}
+
+.light-grey {
+  background-color: #d3d3d3;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.among-grey {
+  background-color: #949694;
+}
+
+/* enhance the UX */
+
+.translucent {
+  opacity: 0.5;
+}
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+/* Simple swipe task */
+
+.card:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
+.modal-row-top img {
+  transition: opacity 0.3s ease;
+}
+
+.cafeteria {
+  position: absolute;
+  pointer-events: auto;
+  width: 20%;
+  height: 35%;
+  /* light yellow base */
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.reactor {
+  position: absolute;
+  pointer-events: auto;
+  width: 150px;
+  height: 300px;
+  background: rgba(255, 255, 0, 0.15); /* light yellow base */
+  border: 2px solid yellow;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.weapons {
+  position: absolute;
+  pointer-events: auto;
+  width: 175px;
+  height: 200px;
+  background: rgba(255, 255, 0, 0.15); /* light yellow base */
+  border: 2px solid yellow;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.oxygen {
+  position: absolute;
+  pointer-events: auto;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 0, 0.15); /* light yellow base */
+  border: 2px solid yellow;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.admin {
+  position: absolute;
+  pointer-events: auto;
+  width: 170px;
+  height: 170px;
+  background: rgba(255, 255, 0, 0.15); /* light yellow base */
+  border: 2px solid yellow;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.electrical {
+  position: absolute;
+  pointer-events: auto;
+  width: 200px;
+  height: 200px;
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+h2 {
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 19;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* SPINNING MODAL CSS */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+.spin-left-content {
+  justify-content: left;
+  align-items: center;
+  display: flex;
+}
+
+.spin-right-content {
+  justify-content: right;
+  align-items: center;
+  display: flex;
+}
+
+.spin-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  opacity: 0.95;
+}
+
+/* Don't cover the entire screen */
+.spin-modal-body {
+  display: block;
+  width: 45%;
+  height: 70%;
+  opacity: 1;
+  margin: 0;
+}
+
+.spin-modal-body-row {
+  display: flex;
+  width: 100%;
+  height: calc(100% / 3);
+  opacity: 1;
+  margin: 0;
+}
+
+.spin-modal-body-box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  margin: 0;
+}
+
+.spin-modal-body-box-1 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  margin: 0;
+}
+
+.right-wrong {
+  background-color: grey;
+  width: 50%;
+  height: 25%;
+  opacity: 1;
+  margin: 0;
+  cursor: default;
+}
+
+.select-right-wrong {
+  width: 75%;
+  height: 50%;
+  opacity: 1;
+  margin: 0;
+}
+
+.select-right-wrong:hover,
+.select-right-wrong:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+
+.rotateCommand {
+  transform: rotate(0deg); /* starting rotation */
+}
+
+.noclick {
+  cursor: default;
+}
+
+#darkness {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 200px at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    rgba(0, 0, 0, 0.95) 80%
+  );
+  transition: background 0.05s linear;
+
+  background: radial-gradient(
+    circle var(--size, 200px) at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.9) 80%
+  );
+}
+
+/* ========================================= */
+/* DISABLE INTERACTION FOR SPINNER IMAGES */
+/* ========================================= */
+
+#rotateMachine1,
+#rotateMachine2,
+#rotateMachine3 {
+  pointer-events: none;
+  cursor: default !important;
+}
+
+#rotateMachine1:hover,
+#rotateMachine2:hover,
+#rotateMachine3:hover {
+  cursor: default !important;
+}
